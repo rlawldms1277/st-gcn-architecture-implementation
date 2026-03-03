@@ -10,14 +10,16 @@ PyTorch 기반으로 ST-GCN (Spatial-Temporal Graph Convolutional Network) 구�
 
 ```mermaid
 flowchart LR
-A[Input N C T V] --> B[BatchNorm2D]
-B --> C[STGCN Block1 3 to 64]
-C --> D[STGCN Block2 64 to 64]
-D --> E[STGCN Block3 64 to 128]
-E --> F[STGCN Block4 128 to 256]
+
+A[Input] --> B[BatchNorm2D]
+B --> C[STGCN Block1]
+C --> D[STGCN Block2]
+
+D --> E[STGCN Block3]
+E --> F[STGCN Block4]
 F --> G[Global Avg Pool]
 G --> H[Fully Connected]
-H --> I[Output Class Scores]
+H --> I[Output]
 ```
 ---
 
